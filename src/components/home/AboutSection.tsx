@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 
 export const AboutSection = () => {
@@ -31,14 +32,17 @@ export const AboutSection = () => {
             </div>
           </div>
 
-          {/* Sisi Konten */}
           <div className="w-full lg:w-1/2">
             <h2
-              className="text-3xl md:text-4xl font-bold text-foreground leading-tight mb-6"
+              className="text-3xl md:text-4xl font-bold text-foreground leading-tight mb-6 uppercase"
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              Title <span className="text-brand-primary">About Us</span>
+              Increase{" "}
+              <span className="text-brand-primary">
+                efficiency and drive performance{" "}
+              </span>
+              for clients
             </h2>
 
             <p
@@ -46,8 +50,9 @@ export const AboutSection = () => {
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              PT Barra Maju Sejahtera adalah mitra strategis dalam manajemen
-              aset dan solusi finansial yang berdedikasi tinggi.
+              PT Barra Maju Sejahtera(BMS) was formerly called CV.HRP Jaya
+              Teknik is a strategic partner in highly dedicated repair,
+              reconditioning and maintenance of machinery.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
@@ -111,9 +116,28 @@ export const AboutSection = () => {
             </div>
 
             <div data-aos="fade-up" data-aos-delay="500">
-              <button className="px-8 py-4 bg-brand-primary hover:bg-brand-dark text-white rounded-xl font-bold shadow-lg shadow-brand-primary/25 transition-all active:scale-95">
-                Pelajari Lebih Lanjut
-              </button>
+              <Link
+                href={"/about"}
+                className="group relative inline-flex items-center gap-3 px-8 py-4 bg-brand-primary text-white rounded-2xl font-bold transition-all duration-300 ease-out hover:bg-brand-dark hover:shadow-[0_20px_40px_rgba(8,81,156,0.3)] active:scale-95 overflow-hidden"
+              >
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></span>
+                <span className="relative z-10">Learn More</span>
+                <svg
+                  className="w-5 h-5 relative z-10 transition-transform duration-300 group-hover:translate-x-1.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2.5}
+                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                  />
+                </svg>
+
+                <span className="absolute inset-0 rounded-2xl border border-white/20"></span>
+              </Link>
             </div>
           </div>
         </div>

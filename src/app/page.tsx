@@ -5,8 +5,8 @@ import { ProductSection } from "@/components/home/ProductSection";
 
 export const metadata: Metadata = {
   openGraph: {
-    title: "Dashboard",
-    description: "Dashboard PT Barra Maju Sejahtera",
+    title: "Landing Page",
+    description: " PT Barra Maju Sejahtera",
     url: "https://barramajusejahtera.vercel.app/",
     siteName: "PT.Barra Maju Sejahtera",
     images: [
