@@ -1,12 +1,18 @@
 "use client";
-import type { Metadata } from "next";
 
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 import { useEffect } from "react";
 import AOS from "aos";
-import "./globals.css";
 
+import "aos/dist/aos.css";
+
+import "./globals.css";
 import { Inter } from "next/font/google";
 import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
+
+config.autoAddCss = false;
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,11 +27,17 @@ export default function RootLayout({
       once: true,
       easing: "ease-out-cubic",
     });
+
+    AOS.refresh();
   }, []);
+
   return (
     <html lang="en" className={inter.className}>
-      <Navbar />
-      <body className="min-h-full flex flex-col ">{children}</body>
+      <body className="min-h-screen flex flex-col">
+        <Navbar />
+        <main className="flex-grow">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }

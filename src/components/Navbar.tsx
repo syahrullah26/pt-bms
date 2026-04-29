@@ -8,23 +8,25 @@ export const Navbar = () => {
 
   const ListMenu = [
     { name: "Home", route: "/", active: true },
-    { name: "Products", route: "/products", active: false },
+    { name: "Services", route: "/service", active: false },
     { name: "About", route: "/about", active: false },
     { name: "Contact", route: "/contact", active: false },
   ];
 
   return (
     <>
-      <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-4xl">
+      <nav
+        className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-4xl"
+        data-aos="fade-down"
+        data-aos-duration="700"
+        data-aos-delay="500"
+      >
         <div className="backdrop-blur-xl bg-ghost-white/80 border border-slate-200/50 shadow-xl rounded-2xl px-6 py-3 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-12 h-12  rounded flex items-center justify-center shrink-0">
-              <img src="/bms-icon.png" alt="logo bms" />
+              <img src="/bms-logo.png" alt="logo bms" />
             </div>
             <h4 className="pl-2 text-[10px] font-black uppercase italic leading-none tracking-tighte text-brand-dark">
-              {/* <span className="mb-0.5 block text-xs font-bold not-italic tracking-[0.2em] text-brand-primary">
-                BMS
-              </span> */}
               PT.Barra Maju Sejahtera
             </h4>
           </div>
@@ -63,7 +65,6 @@ export const Navbar = () => {
           </button>
         </div>
 
-        {/* MOBILE MENU DROPDOWN */}
         <div
           className={`md:hidden absolute top-full left-0 right-0 mt-3 transition-all duration-300 ease-in-out origin-top ${isOpen ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0 pointer-events-none"}`}
         >
@@ -72,7 +73,7 @@ export const Navbar = () => {
               <Link
                 key={index}
                 href={item.route}
-                onClick={() => setIsOpen(false)} // Tutup menu saat link diklik
+                onClick={() => setIsOpen(false)}
                 className={`px-4 py-2 rounded-xl transition-all ${
                   item.active
                     ? "bg-brand-primary text-white font-bold"
