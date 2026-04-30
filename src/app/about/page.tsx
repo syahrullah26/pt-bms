@@ -1,5 +1,6 @@
 import { HeroSections } from "@/components/about/HeroSections";
 import { InfoSection } from "@/components/about/InfoSection";
+import { LocationSection } from "@/components/about/LocationSection";
 import { QuoteSection } from "@/components/about/QuoteSection";
 import { Metadata } from "next";
 export const metadata: Metadata = {
@@ -27,6 +28,7 @@ export default function AboutPage() {
       <HeroSections />
       <div className="bg-white">
         <InfoSection />
+        <LocationSection />
         {/* <QuoteSection /> */}
       </div>
     </>
