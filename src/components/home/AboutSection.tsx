@@ -109,7 +109,7 @@ export const AboutSection = () => {
                     {content.integrity}
                   </h4>
                   <p className="text-sm text-slate-500">
-                    {content.integrityDesc}.
+                    {content.integrityDesc}
                   </p>
                 </div>
               </div>
@@ -139,7 +139,7 @@ export const AboutSection = () => {
                     {content.innovative}
                   </h4>
                   <p className="text-sm text-slate-500">
-                    {content.innovativeDesc}.
+                    {content.innovativeDesc}
                   </p>
                 </div>
               </div>
