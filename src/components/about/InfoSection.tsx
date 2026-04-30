@@ -68,7 +68,7 @@ export const InfoSection = () => {
                 </span>{" "}
                 {content.story1}{" "}
                 <span className="italic">CV. HRP Jaya Teknik</span>.{" "}
-                {content.story2}.
+                {content.story2}
               </p>
 
               <p>
