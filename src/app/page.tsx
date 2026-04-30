@@ -5,8 +5,9 @@ import { ProductSection } from "@/components/home/ProductSection";
 
 export const metadata: Metadata = {
   openGraph: {
-    title: "Landing Page",
-    description: " PT Barra Maju Sejahtera",
+    title: "Landing Page - PT Barra Maju Sejahtera",
+    description:
+      "PT Barra Maju Sejahtera adalah perusahaan yang bergerak di bidang perbaikan dan pemeliharaan mesin.",
     url: "https://barramajusejahtera.vercel.app/",
     siteName: "PT.Barra Maju Sejahtera",
     images: [
