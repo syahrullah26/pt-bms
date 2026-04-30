@@ -10,7 +10,7 @@ export const Navbar = () => {
 
   const ListMenu = [
     { name: "Home", route: "/" },
-    { name: "Services", route: "/service" },
+    { name: "Services", route: "/products" },
     { name: "About", route: "/about" },
     { name: "Contact", route: "/contact" },
   ];

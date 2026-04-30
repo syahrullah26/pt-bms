@@ -81,7 +81,7 @@ export const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/service"
+                  href="/products"
                   className="hover:text-accent transition-colors"
                 >
                   Our Services

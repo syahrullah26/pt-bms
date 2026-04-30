@@ -7,14 +7,14 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 const services = [
   {
     title: "Metal Spray",
-    desc: "teknologi pelapisan permukaan yang melelehkan material logam (kawat/serbuk) dan menyemprotkannya ke benda kerja untuk perbaikan dimensi, anti-korosi, dan perlindungan aus",
+    desc: "teknologi pelapisan permukaan yang melelehkan material logam (kawat/serbuk) dan menyemprotkannya ke benda kerja untuk perbaikan dimensi, anti-korosi, dan perlindungan aus.",
     image: "/metal-spray.webp",
     features: ["Arc Spray", "Flame Spray", "Plasma Spray"],
     delay: 100,
   },
   {
     title: "Repairing and reconditioning  services",
-    desc: "perbaikan pompa di atas kapal meliputi penggantian mechanical seal/packing untuk mengatasi kebocoran, penggantian impeller yang aus, perbaikan casing pompa, penggantian bearing (laher), serta alignment (penyejajaran) poros pompa dengan motor penggerak",
+    desc: "perbaikan pompa di atas kapal meliputi penggantian mechanical seal/packing untuk mengatasi kebocoran, penggantian impeller yang aus, perbaikan casing pompa, penggantian bearing (laher), serta alignment (penyejajaran) poros pompa dengan motor penggerak.",
     image: "/repairing.webp",
     features: [
       "Pengecekan Berkala",
@@ -25,7 +25,7 @@ const services = [
   },
   {
     title: "Teflon Coating",
-    desc: "proses pelapisan permukaan bahan (biasanya logam) dengan bahan sintetis politetrafluoroetilena (PTFE) untuk menciptakan permukaan yang anti lengket, halus, tahan panas, korosi, dan memiliki koefisien gesekan sangat rendah",
+    desc: "proses pelapisan permukaan bahan (biasanya logam) dengan bahan sintetis politetrafluoroetilena (PTFE) untuk menciptakan permukaan yang anti lengket, halus, tahan panas, korosi, dan memiliki koefisien gesekan sangat rendah.",
     image: "/teflon-coating.webp",
     features: ["Non-Stick", "Tahan Suhu Tinggi dan Kimia", "Pelumasan"],
     delay: 300,
@@ -35,13 +35,14 @@ const services = [
 export const ServiceSection = () => {
   return (
     <section>
-      <div className="space-y-24 md:space-y-40">
+      <div className="space-y-12 md:space-y-32">
         {services.map((service, index) => {
           const isEven = index % 2 === 1;
           return (
             <div
               key={index}
-              className={`flex flex-col gap-12 items-center ${isEven ? "md:flex-row-reverse" : "md:flex-row"}`}
+              className={`flex flex-col bg-ghost-white px-12 py-6 rounded-[3rem] gap-6 items-center ${isEven ? "md:flex-row-reverse" : "md:flex-row"}`}
+              data-aos="zoom-in"
             >
               <div
                 className="w-full md:w-1/2"
@@ -62,13 +63,10 @@ export const ServiceSection = () => {
                 className="w-full md:w-1/2 space-y-6"
                 data-aos={isEven ? "fade-left" : "fade-right"}
               >
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-brand-primary/10 text-brand-primary font-bold text-xl mb-2">
-                  0{index + 1}
-                </div>
-                <h4 className="text-3xl md:text-4xl font-extrabold text-brand-dark">
+                <h4 className="text-2xl md:text-3xl font-extrabold text-brand-dark">
                   {service.title}
                 </h4>
-                <p className="text-slate-600 text-lg leading-relaxed">
+                <p className="text-slate-600 text-lg leading-relaxed text-justify">
                   {service.desc}
                 </p>
 
@@ -88,7 +86,7 @@ export const ServiceSection = () => {
                 </ul>
 
                 <div className="pt-6">
-                  <button className="group flex items-center gap-3 font-bold text-brand-primary hover:text-brand-dark transition-colors">
+                  <button className="group flex items-center gap-3 font-bold text-brand-primary hover:text-brand-dark transition-colors cursor-pointer">
                     View Detail
                     <ArrowRight className="group-hover:translate-x-2 transition-transform" />
                   </button>
