@@ -5,7 +5,35 @@ import { useLanguage } from "@/context/LanguageContent";
 
 export const AboutSection = () => {
   const { language } = useLanguage();
-  const content = language === "en" ? {} : {};
+  const content =
+    language === "en"
+      ? {
+          tagline1: "Increase ",
+          tagline2: "efficiency and drive performance ",
+          tagline3: "for clients",
+          about:
+            "PT Barra Maju Sejahtera(BMS) was formerly called CV.HRP Jaya Teknik is a strategic partner in highly dedicated repair, reconditioning and maintenance of machinery.",
+          integrity: "High Integrity",
+          innovative: "Innovative Solutions",
+          integrityDesc: "Upholding high work ethics in every transaction.",
+          innovativeDesc:
+            "Delivering services that are relevant to the market.",
+          learnMore: "Learn More",
+          yearsExperience: "Years Experience",
+        }
+      : {
+          tagline1: "Meningkatkan ",
+          tagline2: "efisiensi dan mendorong performa ",
+          tagline3: "bagi para klien",
+          about:
+            "PT Barra Maju Sejahtera (BMS), yang sebelumnya bernama CV. HRP Jaya Teknik, adalah mitra strategis yang sangat berdedikasi dalam layanan perbaikan, rekondisi, dan pemeliharaan mesin.",
+          integrity: "Integritas Tinggi",
+          innovative: "Solusi Inovatif",
+          integrityDesc: "Menjunjung tinggi etika kerja di setiap transaksi.",
+          innovativeDesc: "Menghadirkan layanan yang relevan dengan pasar.",
+          learnMore: "Pelajari Lebih Lanjut",
+          yearsExperience: "Tahun Pengalaman",
+        };
   return (
     <section className="py-20 bg-white overflow-hidden">
       <div className="container mx-auto px-6">
@@ -29,9 +57,9 @@ export const AboutSection = () => {
               data-aos="zoom-in"
               data-aos-delay="400"
             >
-              <p className="text-white font-bold text-3xl">4+</p>
+              <p className="text-white font-bold text-3xl">10+</p>
               <p className="text-white/80 text-xs uppercase tracking-widest">
-                Product Services
+                {content.yearsExperience}
               </p>
             </div>
           </div>
@@ -42,11 +70,9 @@ export const AboutSection = () => {
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              Increase{" "}
-              <span className="text-brand-primary">
-                efficiency and drive performance{" "}
-              </span>
-              for clients
+              {content.tagline1}
+              <span className="text-brand-primary">{content.tagline2}</span>
+              {content.tagline3}
             </h2>
 
             <p
@@ -54,9 +80,7 @@ export const AboutSection = () => {
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              PT Barra Maju Sejahtera(BMS) was formerly called CV.HRP Jaya
-              Teknik is a strategic partner in highly dedicated repair,
-              reconditioning and maintenance of machinery.
+              {content.about}
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
@@ -82,10 +106,10 @@ export const AboutSection = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-foreground">
-                    Integritas Tinggi
+                    {content.integrity}
                   </h4>
                   <p className="text-sm text-slate-500">
-                    Menjunjung tinggi etika kerja di setiap transaksi.
+                    {content.integrityDesc}.
                   </p>
                 </div>
               </div>
@@ -111,9 +135,11 @@ export const AboutSection = () => {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-bold text-foreground">Solusi Inovatif</h4>
+                  <h4 className="font-bold text-foreground">
+                    {content.innovative}
+                  </h4>
                   <p className="text-sm text-slate-500">
-                    Menghadirkan layanan yang relevan dengan pasar.
+                    {content.innovativeDesc}.
                   </p>
                 </div>
               </div>
@@ -125,7 +151,7 @@ export const AboutSection = () => {
                 className="group relative inline-flex items-center gap-3 px-8 py-4 bg-brand-primary text-white rounded-2xl font-bold transition-all duration-300 ease-out hover:bg-brand-dark hover:shadow-[0_20px_40px_rgba(8,81,156,0.3)] active:scale-95 overflow-hidden"
               >
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></span>
-                <span className="relative z-10">Learn More</span>
+                <span className="relative z-10">{content.learnMore}</span>
                 <svg
                   className="w-5 h-5 relative z-10 transition-transform duration-300 group-hover:translate-x-1.5"
                   fill="none"

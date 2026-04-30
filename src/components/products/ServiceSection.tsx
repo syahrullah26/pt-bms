@@ -3,36 +3,12 @@
 import React from "react";
 import Image from "next/image";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
-
-const services = [
-  {
-    title: "Metal Spray",
-    desc: "teknologi pelapisan permukaan yang melelehkan material logam (kawat/serbuk) dan menyemprotkannya ke benda kerja untuk perbaikan dimensi, anti-korosi, dan perlindungan aus.",
-    image: "/metal-spray.webp",
-    features: ["Arc Spray", "Flame Spray", "Plasma Spray"],
-    delay: 100,
-  },
-  {
-    title: "Repairing and reconditioning  services",
-    desc: "perbaikan pompa di atas kapal meliputi penggantian mechanical seal/packing untuk mengatasi kebocoran, penggantian impeller yang aus, perbaikan casing pompa, penggantian bearing (laher), serta alignment (penyejajaran) poros pompa dengan motor penggerak.",
-    image: "/repairing.webp",
-    features: [
-      "Pengecekan Berkala",
-      "Pelumasan Sistem",
-      "Laporan Kondisi Mesin",
-    ],
-    delay: 200,
-  },
-  {
-    title: "Teflon Coating",
-    desc: "proses pelapisan permukaan bahan (biasanya logam) dengan bahan sintetis politetrafluoroetilena (PTFE) untuk menciptakan permukaan yang anti lengket, halus, tahan panas, korosi, dan memiliki koefisien gesekan sangat rendah.",
-    image: "/teflon-coating.webp",
-    features: ["Non-Stick", "Tahan Suhu Tinggi dan Kimia", "Pelumasan"],
-    delay: 300,
-  },
-];
+import { useLanguage } from "@/context/LanguageContent";
+import { productDataList } from "@/constants/data";
 
 export const ServiceSection = () => {
+  const { language } = useLanguage();
+  const services = productDataList[language as keyof typeof productDataList];
   return (
     <section>
       <div className="space-y-12 md:space-y-32">

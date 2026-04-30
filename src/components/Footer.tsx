@@ -7,9 +7,24 @@ import {
   faTiktok,
 } from "@fortawesome/free-brands-svg-icons";
 
+import { useLanguage } from "@/context/LanguageContent";
+import { title } from "process";
+
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
-
+  const { language } = useLanguage();
+  const content =
+    language === "en"
+      ? {
+          titleContact: "Contact Us",
+          titleQuickAction: "Quick Actions",
+          tagline: "Increase efficiency and drive performance for clients.",
+        }
+      : {
+          titleContact: "Hubungi Kami",
+          titleQuickAction: "Pintasan",
+          tagline: "Tingkatkan efisiensi dan mendorong kinerja untuk klien.",
+        };
   return (
     <footer className="bg-brand-dark text-ghost-white pt-16 pb-8">
       <div className="mx-auto max-w-7xl px-6 md:px-16 w-full">
@@ -27,7 +42,7 @@ export const Footer = () => {
               </span>
             </div>
             <p className="text-cloud-white/80 leading-relaxed text-sm">
-              Increase efficiency and drive performance for clients.
+              {content.tagline}
             </p>
             <div className="flex gap-4">
               <Link
@@ -62,7 +77,7 @@ export const Footer = () => {
 
           <div>
             <h4 className="text-lg font-bold mb-6 relative inline-block">
-              Quick Actions
+              {content.titleQuickAction.toUpperCase()}
               <span className="absolute -bottom-1 left-0 w-1/2 h-0.5 bg-accent"></span>
             </h4>
             <ul className="space-y-4 text-cloud-white/80 text-sm">
@@ -100,7 +115,7 @@ export const Footer = () => {
 
           <div>
             <h4 className="text-lg font-bold mb-6 relative inline-block">
-              Contact Us
+              {content.titleContact.toUpperCase()}
               <span className="absolute -bottom-1 left-0 w-1/2 h-0.5 bg-accent"></span>
             </h4>
             <ul className="space-y-4 text-sm">

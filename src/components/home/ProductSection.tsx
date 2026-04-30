@@ -2,6 +2,8 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, EffectCreative } from "swiper/modules";
+import { useLanguage } from "@/context/LanguageContent";
+import { productData } from "@/constants/data";
 import Image from "next/image";
 
 import "swiper/css";
@@ -9,26 +11,16 @@ import "swiper/css/pagination";
 import "swiper/css/effect-creative";
 
 export const ProductSection = () => {
-  const products = [
-    {
-      id: 1,
-      title: "Metal Spray",
-      desc: "teknologi pelapisan permukaan yang melelehkan material logam (kawat/serbuk) dan menyemprotkannya ke benda kerja untuk perbaikan dimensi, anti-korosi, dan perlindungan aus",
-      image: "/metal-spray.webp",
-    },
-    {
-      id: 2,
-      title: "Repairing and reconditioning  services",
-      desc: "perbaikan pompa di atas kapal meliputi penggantian mechanical seal/packing untuk mengatasi kebocoran, penggantian impeller yang aus, perbaikan casing pompa, penggantian bearing (laher), serta alignment (penyejajaran) poros pompa dengan motor penggerak",
-      image: "/repairing.webp",
-    },
-    {
-      id: 3,
-      title: "Teflon Coating",
-      desc: "proses pelapisan permukaan bahan (biasanya logam) dengan bahan sintetis politetrafluoroetilena (PTFE) untuk menciptakan permukaan yang anti lengket, halus, tahan panas, korosi, dan memiliki koefisien gesekan sangat rendah",
-      image: "/teflon-coating.webp",
-    },
-  ];
+  const { language } = useLanguage();
+
+  const Products = productData[language as keyof typeof productData];
+
+  const content =
+    language === "en"
+      ? {
+          title: "Our Services",
+        }
+      : { title: "Layanan Kami" };
 
   return (
     <section
@@ -42,7 +34,7 @@ export const ProductSection = () => {
           data-aos-delay="200"
         >
           <h2 className="text-3xl font-bold text-brand-primary uppercase tracking-widest mb-2">
-            Our Services
+            {content.title}
           </h2>
           <div className="h-1.5 w-16 bg-brand-primary mx-auto rounded-full"></div>
         </div>
@@ -69,7 +61,7 @@ export const ProductSection = () => {
             }}
             className="pb-20 !px-2"
           >
-            {products.map((product) => (
+            {Products.map((product) => (
               <SwiperSlide key={product.id}>
                 <div className="group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 h-full">
                   <div className="relative h-64 md:h-72 w-full overflow-hidden">
