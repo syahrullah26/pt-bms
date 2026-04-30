@@ -1,3 +1,4 @@
+"use client";
 import { Target, Rocket } from "lucide-react";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContent";

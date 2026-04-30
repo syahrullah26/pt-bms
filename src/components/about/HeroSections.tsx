@@ -1,3 +1,4 @@
+"use client";
 import { useLanguage } from "@/context/LanguageContent";
 export const HeroSections = () => {
   const { language } = useLanguage();
