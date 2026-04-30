@@ -18,7 +18,7 @@ export const HeroSections = () => {
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          PT Barra Maju Sejahtera ... (tambahin deskripsi)
+          {/* PT Barra Maju Sejahtera ... (tambahin deskripsi) */}
         </p>
       </div>
     </section>

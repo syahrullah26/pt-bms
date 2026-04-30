@@ -69,7 +69,7 @@ export const ContactSection = () => {
                     type="text"
                     required
                     className="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-brand-primary outline-none"
-                    placeholder="Masukkan nama Anda"
+                    placeholder="Masukkan nama lengkap anda"
                   />
                   <User
                     className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"
@@ -88,7 +88,7 @@ export const ContactSection = () => {
                     type="email"
                     required
                     className="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-brand-primary outline-none"
-                    placeholder="nama@perusahaan.com"
+                    placeholder="Masukkan email anda"
                   />
                   <Mail
                     className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"

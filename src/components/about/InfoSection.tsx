@@ -1,6 +1,21 @@
 import { Target, Rocket } from "lucide-react";
 import Image from "next/image";
 export const InfoSection = () => {
+  const visiList = [];
+  const misiList = [
+    {
+      id: 1,
+      text: "Memberikan solusi perbaikan mesin yang tepat waktu dan efisien untuk meminimalkan downtime produksi pelanggan.",
+    },
+    {
+      id: 2,
+      text: "Menggunakan teknologi mutakhir dan teknisi ahli untuk menjamin kualitas hasil perbaikan.",
+    },
+    {
+      id: 3,
+      text: "Mengutamakan keselamatan kerja ( K3 ) dalam setiap operasional.",
+    },
+  ];
   return (
     <>
       <section className="py-24 container mx-auto px-6 md:px-16">
@@ -25,6 +40,18 @@ export const InfoSection = () => {
                 protect our integrity from irresponsible parties who misused our
                 former name. Today, we stand firmer and more accountable than
                 ever.
+              </p>
+
+              <p>
+                {" "}
+                <span className="italic">CV. HRP Jaya Teknik</span>
+                {""} was established in 2010 and has experience in
+                reconditioning and coating work. Our partners include{" "}
+                <span className="font-bold text-brand-dark">
+                  Tifico, KAI, Indocement
+                </span>{" "}
+                and <span className="font-bold text-brand-dark">shipyards</span>
+                {""}.
               </p>
 
               <p>
@@ -71,7 +98,11 @@ export const InfoSection = () => {
               <Target size={28} />
             </div>
             <h3 className="text-2xl font-bold mb-4">Visi Strategis</h3>
-            <p className="text-slate-500">(tambahin VIsi perusahaan)</p>
+            <p className="text-slate-500 text-justify hover:scale-105 transition-transform duration-500  ">
+              Menjadi mitra terpercaya dan terdepan dalam jasa pemeliharaan,
+              perbaikan, dan fabrikasi mesin industri serta peralatan
+              mekanikal/elektrikal di Indonesia.
+            </p>
           </div>
 
           <div
@@ -83,7 +114,30 @@ export const InfoSection = () => {
               <Rocket size={28} />
             </div>
             <h3 className="text-2xl font-bold mb-4">Misi Operasional</h3>
-            <p className="text-slate-500">(tambahin misi perusahaan)</p>
+            {misiList.map((misi) => {
+              return (
+                <div key={misi.id} className="flex items-start gap-3 mb-4">
+                  <div className="mt-1 w-5 h-5 rounded-full bg-brand-primary flex items-center justify-center shrink-0 text-justify">
+                    <svg
+                      className="w-3 h-3 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </div>
+                  <p className="text-slate-500 text-justify  hover:scale-95 transition-transform duration-500  ">
+                    {misi.text}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

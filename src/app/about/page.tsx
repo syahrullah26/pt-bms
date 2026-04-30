@@ -9,7 +9,7 @@ export default function AboutPage() {
       <HeroSections />
       <div className="bg-white">
         <InfoSection />
-        <QuoteSection />
+        {/* <QuoteSection /> */}
       </div>
     </>
   );

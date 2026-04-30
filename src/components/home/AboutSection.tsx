@@ -1,7 +1,11 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
+import { useLanguage } from "@/context/LanguageContent";
 
 export const AboutSection = () => {
+  const { language } = useLanguage();
+  const content = language === "en" ? {} : {};
   return (
     <section className="py-20 bg-white overflow-hidden">
       <div className="container mx-auto px-6">

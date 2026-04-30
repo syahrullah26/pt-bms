@@ -27,7 +27,7 @@ export const Footer = () => {
               </span>
             </div>
             <p className="text-cloud-white/80 leading-relaxed text-sm">
-              ---Brand Tagline----
+              Increase efficiency and drive performance for clients.
             </p>
             <div className="flex gap-4">
               <Link
@@ -81,7 +81,7 @@ export const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/products"
+                  href="/service"
                   className="hover:text-accent transition-colors"
                 >
                   Our Services
@@ -106,15 +106,28 @@ export const Footer = () => {
             <ul className="space-y-4 text-sm">
               <li className="flex items-start gap-3 text-cloud-white/80">
                 <MapPin className="text-accent shrink-0" size={18} />
-                <span>Tigaraksa Kabupaten Tangerang</span>
+                <span>
+                  Jl.Anggrek Merpati No.22 Blok AI43, Margasari, Tigaraksa,
+                  Tangerang Regency, Banten 15720
+                </span>
               </li>
               <li className="flex items-center gap-3 text-cloud-white/80">
                 <Phone className="text-accent shrink-0" size={18} />
-                <span>+62 21 5550 1234</span>
+                <a
+                  href="https://wa.link/bpdxaz"
+                  className="hover:text-accent transition-colors hover:underline hover:underline-offset-4 hover:decoration-accent hover:scale-105  duration-300"
+                >
+                  <span>+62 815-1666-575</span>
+                </a>
               </li>
               <li className="flex items-center gap-3 text-cloud-white/80">
                 <Mail className="text-accent shrink-0" size={18} />
-                <span>info@barramajusejahtera.com</span>
+                <a
+                  href="mailto:ptbarrams@gmail.com"
+                  className="hover:text-accent transition-colors hover:underline hover:underline-offset-4 hover:decoration-accent hover:scale-105  duration-300"
+                >
+                  <span>ptbarrams@gmail.com</span>
+                </a>
               </li>
             </ul>
           </div>
@@ -123,12 +136,12 @@ export const Footer = () => {
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-cloud-white/60">
           <p>© {currentYear} PT Barra Maju Sejahtera.</p>
           <div className="flex gap-6">
-            <Link href="#" className="hover:text-white transition-colors">
+            {/* <Link href="#" className="hover:text-white transition-colors">
               Kebijakan Privasi
             </Link>
             <Link href="#" className="hover:text-white transition-colors">
               Syarat & Ketentuan
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

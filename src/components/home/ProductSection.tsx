@@ -10,10 +10,24 @@ import "swiper/css/effect-creative";
 
 export const ProductSection = () => {
   const products = [
-    { id: 1, title: "Services 1", desc: "Desc 1", image: "/product-1.jpg" },
-    { id: 2, title: "Services 2", desc: "Desc 2", image: "/product-1.jpg" },
-    { id: 3, title: "Services 3", desc: "Desc 3", image: "/product-1.jpg" },
-    { id: 4, title: "Services 4", desc: "Desc 4", image: "/product-1.jpg" },
+    {
+      id: 1,
+      title: "Metal Spray",
+      desc: "teknologi pelapisan permukaan yang melelehkan material logam (kawat/serbuk) dan menyemprotkannya ke benda kerja untuk perbaikan dimensi, anti-korosi, dan perlindungan aus",
+      image: "/metal-spray.webp",
+    },
+    {
+      id: 2,
+      title: "Repairing and reconditioning  services",
+      desc: "perbaikan pompa di atas kapal meliputi penggantian mechanical seal/packing untuk mengatasi kebocoran, penggantian impeller yang aus, perbaikan casing pompa, penggantian bearing (laher), serta alignment (penyejajaran) poros pompa dengan motor penggerak",
+      image: "/repairing.webp",
+    },
+    {
+      id: 3,
+      title: "Teflon Coating",
+      desc: "proses pelapisan permukaan bahan (biasanya logam) dengan bahan sintetis politetrafluoroetilena (PTFE) untuk menciptakan permukaan yang anti lengket, halus, tahan panas, korosi, dan memiliki koefisien gesekan sangat rendah",
+      image: "/teflon-coating.webp",
+    },
   ];
 
   return (

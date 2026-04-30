@@ -11,6 +11,8 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { LanguageProvider } from "@/context/LanguageContent";
+import { LangSwitcher } from "@/components/ui/LangSwitcher";
 
 config.autoAddCss = false;
 
@@ -34,9 +36,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <body className="min-h-screen flex flex-col">
-        <Navbar />
-        <main className="grow block">{children}</main>
-        <Footer />
+        <LanguageProvider>
+          <Navbar />
+          <main className="grow block">{children}</main>
+          <LangSwitcher />
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );
